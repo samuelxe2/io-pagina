@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06080f">
+  <title>Panel del profesor · Salvar Solutions TECH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/escape.css">
+  <link rel="stylesheet" href="/css/host.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M15 22v-6a9 9 0 0 1 18 0v6' stroke='%23ffc548' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Crect x='9' y='21' width='30' height='22' rx='6' fill='%23ffc548'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="host">
+    <!-- Crear sala -->
+    <section id="hStart" class="h-start">
+      <div class="card" style="max-width:520px;margin:10vh auto;text-align:center">
+        <div style="color:var(--warn)" id="startLock"></div>
+        <div class="eyebrow" style="color:var(--warn)">Panel del profesor</div>
+        <h1>Misión: Salvar Solutions TECH</h1>
+        <p class="muted">60 minutos · 3 candados de 20 minutos, cada uno dirigido por un grupo:
+          <b style="color:#4fd1ff">Pura</b> (Grupo 1), <b style="color:#b388ff">Mixta</b> (Grupo 2) y <b style="color:#3ee8a5">Binaria</b> (Grupo 3).</p>
+        <button class="btn primary block" id="createBtn" style="margin-top:14px">Crear sala nueva</button>
+        <div id="resume"></div>
+        <div class="error" id="startError"></div>
+      </div>
+    </section>
+
+    <!-- Tablero -->
+    <section id="hBoard" class="hidden">
+      <header class="h-top">
+        <div class="h-join">
+          <div id="qr" class="qr"></div>
+          <div>
+            <div class="eyebrow">Entra desde tu celular</div>
+            <div class="h-url" id="joinUrl"></div>
+            <div class="h-code">Sala <b id="code"></b></div>
+          </div>
+        </div>
+        <div class="h-clock">
+          <div class="eyebrow" id="clockLabel">Sin candado activo</div>
+          <div class="h-timer" id="bigTimer">--:--</div>
+        </div>
+        <div class="h-stats">
+          <div><b id="nTeams">0</b><small>equipos</small></div>
+          <button class="btn small ghost" id="fsBtn" title="Pantalla completa">⛶</button>
+        </div>
+      </header>
+
+      <div class="h-grid">
+        <div>
+          <div class="h-locks" id="hLocks"></div>
+          <div class="card" style="margin-top:14px">
+            <div class="h-row">
+              <div class="eyebrow">Progreso en vivo</div>
+              <span class="muted" id="activeName" style="font-size:.85rem"></span>
+            </div>
+            <div class="h-progress" id="hProgress"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="h-row"><div class="eyebrow">Ranking general</div><span class="muted" style="font-size:.8rem" id="storage"></span></div>
+          <div id="hRank"></div>
+          <div class="h-row" style="margin-top:16px">
+            <button class="btn small danger" id="finishBtn">Finalizar juego</button>
+            <button class="btn small ghost" id="newBtn">Nueva sala</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Podio -->
+    <section id="hPodium" class="hidden">
+      <div class="podium-wrap">
+        <div class="eyebrow" style="color:var(--warn);text-align:center">Solutions TECH se salvó</div>
+        <h1 style="text-align:center;font-size:2.6rem">Resultados finales</h1>
+        <div class="podium" id="podium"></div>
+        <div class="card" style="max-width:760px;margin:20px auto 0" id="podiumRest"></div>
+        <div style="text-align:center;margin-top:18px"><button class="btn ghost small" id="backBoard">Volver al tablero</button></div>
+      </div>
+    </section>
+  </div>
+
+  <dialog id="solDlg" class="sol-dlg">
+    <div class="sol-head"><h2 id="solTitle"></h2><button class="btn small ghost" id="solClose">✕</button></div>
+    <div id="solBody" class="sol-body"></div>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/host.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050a1a">
+  <title>Misión: Salvar Solutions TECH</title>
+  <meta name="description" content="Novela gráfica interactiva de Programación Entera: tres casos para salvar a Solutions TECH.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/comic.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M15 22v-6a9 9 0 0 1 18 0v6' stroke='%23ff8a1f' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Crect x='9' y='21' width='30' height='22' rx='6' fill='%23ff8a1f'/%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="hud" id="hud" data-ep="1"></header>
+  <main class="stage" id="stage"></main>
+
+  <dialog class="data-dlg" id="dataDlg">
+    <div class="data-head">📁 EXPEDIENTE DEL CASO <button id="dataClose" aria-label="Cerrar">✕</button></div>
+    <div class="data-body" id="dataBody"></div>
+  </dialog>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/comic.js"></script>
+  <script src="/js/mechanics.js"></script>
+  <script src="/js/player.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "escape-room-solutions-tech",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Escape Room digital de Programación Entera (Pura, Mixta, Binaria) para el caso Solutions TECH",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "build": "echo \"sitio estatico: nada que compilar\""
+  },
+  "engines": { "node": ">=18" }
+}
