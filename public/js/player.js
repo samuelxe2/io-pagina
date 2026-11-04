@@ -133,7 +133,7 @@
           ${C.stat("Plazo", "48 <small>horas</small>", "para decidir", "rojo")}
         </div>
       </div>
-      ${C.caption("La misión tiene <b>tres casos de 20 minutos</b>. Cada caso lo dirige un grupo de la clase y se abre resolviendo 5 desafíos.", "wide")}
+      ${C.caption("La misión tiene <b>tres casos de 80 minutos</b>. Cada caso lo dirige un grupo de la clase y se abre resolviendo 5 desafíos.", "wide")}
       <div class="cta-row"><button class="btn-mission" id="toMap">VER LOS CASOS →</button></div>
     </section>`, 2);
     $("#toMap").addEventListener("click", () => { S.juntaSeen = true; store.set("er-junta", 1); renderMap(true); });

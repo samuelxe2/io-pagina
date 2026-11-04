@@ -1,6 +1,6 @@
 # Escape Room · Solutions TECH (Programación Entera)
 
-Dinámica de clase de **60 minutos**: tres candados de **20 minutos**, cada uno dirigido por un grupo.
+Dinámica de clase de **240 minutos**: tres candados de **80 minutos**, cada uno dirigido por un grupo.
 
 | Candado | Grupo | Tema | Clave final |
 |---|---|---|---|

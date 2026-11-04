@@ -116,7 +116,7 @@
         if (l.estado === "cerrada" && !confirm("Reiniciar el candado reinicia su cronómetro (el progreso de los equipos se conserva). ¿Continuar?")) return;
         const other = data.session.locks.find(x => x.estado === "activa");
         if (other && !confirm(`${other.titulo} sigue activo y se cerrará. ¿Continuar?`)) return;
-        await api("host.start", { ...auth, lockId: id, minutos: +$("#min-" + id).value || 20 });
+        await api("host.start", { ...auth, lockId: id, minutos: +$("#min-" + id).value || 80 });
       } else if (act === "extend") await api("host.extend", { ...auth, lockId: id, minutos: 2 });
       else if (act === "close") { if (!confirm("¿Cerrar el candado ahora?")) return; await api("host.close", { ...auth, lockId: id }); }
       else if (act === "sol") return showSolution(id);
